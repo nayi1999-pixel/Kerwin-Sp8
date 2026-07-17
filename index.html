@@ -99,7 +99,7 @@
     <!-- Soft background glow circles to mimic the image's gradient background -->
     <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-[#EBE4DA] rounded-full blur-[100px] opacity-60 -z-10 translate-x-1/3 -translate-y-1/4"></div>
     
-    <div class="grid lg:grid-cols-12 gap-12 items-center">
+    <div class="grid lg:grid-cols-12 gap-12 items-center mb-16">
       
       <!-- Hero Content -->
       <div class="lg:col-span-6 relative z-10">
@@ -120,52 +120,52 @@
         <button class="bg-gradient-to-r from-[#C2A384] to-[#B39371] hover:from-[#B39371] hover:to-[#A68360] text-white px-8 py-4 rounded-full text-sm font-semibold tracking-widest uppercase flex items-center gap-3 transition-all duration-300 shadow-[0_8px_20px_rgba(179,147,113,0.3)]">
           Let's Work Together
           <i data-lucide="arrow-right" class="w-4 h-4"></i>
-        <div class="mt-16 lg:-mt-12 relative z-20">
-          <div class="bg-white/40 backdrop-blur-xl border border-white/60 shadow-[0_8px_32px_0_rgba(31,38,135,0.05)] rounded-2xl p-4 lg:p-8 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-12">
-            
-            <div class="flex flex-col items-center text-center px-4">
-              <div class="w-12 h-12 rounded-full flex items-center justify-center bg-[#F6F4F0] text-[#B39371] mb-4 shadow-sm border border-white/50">
-                <i data-lucide="users" class="w-5 h-5"></i>
-              </div>
-              <h3 class="text-[11px] font-bold tracking-widest uppercase text-[#4A4744] mb-2">Empathetic Leadership</h3>
-              <p class="text-sm text-[#7A7571] font-light leading-relaxed">Lead with compassion.<br/>Strengthen team well-being.</p>
-            </div>
+        </button>
+      </div>
 
-            <div class="flex flex-col items-center text-center px-4 md:border-l md:border-[#D5C2A4]/30 relative">
-              <div class="w-12 h-12 rounded-full flex items-center justify-center bg-[#F6F4F0] text-[#B39371] mb-4 shadow-sm border border-white/50">
-                <i data-lucide="target" class="w-5 h-5"></i>
-              </div>
-              <h3 class="text-[11px] font-bold tracking-widest uppercase text-[#4A4744] mb-2">Ethical Coverage</h3>
-              <p class="text-sm text-[#7A7571] font-light leading-relaxed">Transform crime reporting.<br/>Build community trust.</p>
-            </div>
-
-            <div class="flex flex-col items-center text-center px-4 md:border-l md:border-[#D5C2A4]/30 relative">
-              <div class="w-12 h-12 rounded-full flex items-center justify-center bg-[#F6F4F0] text-[#B39371] mb-4 shadow-sm border border-white/50">
-                <i data-lucide="leaf" class="w-5 h-5"></i>
-              </div>
-              <h3 class="text-[11px] font-bold tracking-widest uppercase text-[#4A4744] mb-2">Lasting Impact</h3>
-              <p class="text-sm text-[#7A7571] font-light leading-relaxed">Shape newsroom culture.<br/>Create systemic change.</p>
-            </div>
-
-          </div>
-          <h3 class="text-[11px] font-bold tracking-widest uppercase text-theme-darkgray mb-2">Editorial Strategy</h3>
-          <p class="text-sm text-theme-gray font-light leading-relaxed">Lead with integrity.<br/>Produce award-winning content.</p>
+      <!-- Hero Image -->
+      <div class="lg:col-span-6 relative z-0 flex justify-center lg:justify-end">
+        <div class="relative w-full max-w-[400px] lg:max-w-[500px]">
+           <!-- Elegant Arch Frame for the portrait -->
+           <div class="aspect-[4/5] w-full rounded-t-[200px] rounded-b-[20px] overflow-hidden shadow-2xl relative flex items-center justify-center">
+              <img 
+                src="https://www.poynter.org/wp-content/uploads/2023/10/Kerwin-Speight-03-EDIT-1.jpg" 
+                alt="Kerwin Speight" 
+                class="absolute inset-0 w-full h-full object-cover object-center sepia-[15%] contrast-[105%] brightness-[102%]"
+              />
+              <!-- Soft overlay to blend image slightly into the warm theme -->
+              <div class="absolute inset-0 bg-theme-lightgold/5"></div>
+           </div>
         </div>
+      </div>
+    </div>
 
-        <div class="flex flex-col items-center text-center px-4 md:border-l md:border-theme-lightgold/30 relative">
-          <div class="w-12 h-12 rounded-full flex items-center justify-center bg-theme-bg text-theme-gold mb-4 shadow-sm border border-white/50">
+    <!-- Glassmorphism Feature Cards - Now positioned cleanly below the grid -->
+    <div class="relative z-20 w-full">
+      <div class="bg-white/40 backdrop-blur-xl border border-white/60 shadow-[0_8px_32px_0_rgba(31,38,135,0.05)] rounded-2xl p-6 lg:p-10 grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+        
+        <div class="flex flex-col items-center text-center px-4">
+          <div class="w-12 h-12 rounded-full flex items-center justify-center bg-[#F6F4F0] text-[#B39371] mb-4 shadow-sm border border-white/50">
             <i data-lucide="users" class="w-5 h-5"></i>
           </div>
-          <h3 class="text-[11px] font-bold tracking-widest uppercase text-theme-darkgray mb-2">Newsroom Leadership</h3>
-          <p class="text-sm text-theme-gray font-light leading-relaxed">Align vision with action.<br/>Build high-performing teams.</p>
+          <h3 class="text-[11px] font-bold tracking-widest uppercase text-[#4A4744] mb-2">Empathetic Leadership</h3>
+          <p class="text-sm text-[#7A7571] font-light leading-relaxed">Lead with compassion.<br/>Strengthen team well-being.</p>
         </div>
 
-        <div class="flex flex-col items-center text-center px-4 md:border-l md:border-theme-lightgold/30 relative">
-          <div class="w-12 h-12 rounded-full flex items-center justify-center bg-theme-bg text-theme-gold mb-4 shadow-sm border border-white/50">
-            <i data-lucide="mic" class="w-5 h-5"></i>
+        <div class="flex flex-col items-center text-center px-4 md:border-l md:border-[#D5C2A4]/30 relative">
+          <div class="w-12 h-12 rounded-full flex items-center justify-center bg-[#F6F4F0] text-[#B39371] mb-4 shadow-sm border border-white/50">
+            <i data-lucide="target" class="w-5 h-5"></i>
           </div>
-          <h3 class="text-[11px] font-bold tracking-widest uppercase text-theme-darkgray mb-2">Media Training</h3>
-          <p class="text-sm text-theme-gray font-light leading-relaxed">Equip journalists.<br/>Navigate industry transformation.</p>
+          <h3 class="text-[11px] font-bold tracking-widest uppercase text-[#4A4744] mb-2">Ethical Coverage</h3>
+          <p class="text-sm text-[#7A7571] font-light leading-relaxed">Transform crime reporting.<br/>Build community trust.</p>
+        </div>
+
+        <div class="flex flex-col items-center text-center px-4 md:border-l md:border-[#D5C2A4]/30 relative">
+          <div class="w-12 h-12 rounded-full flex items-center justify-center bg-[#F6F4F0] text-[#B39371] mb-4 shadow-sm border border-white/50">
+            <i data-lucide="leaf" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-[11px] font-bold tracking-widest uppercase text-[#4A4744] mb-2">Lasting Impact</h3>
+          <p class="text-sm text-[#7A7571] font-light leading-relaxed">Shape newsroom culture.<br/>Create systemic change.</p>
         </div>
 
       </div>
