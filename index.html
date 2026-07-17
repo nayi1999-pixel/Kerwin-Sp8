@@ -1,1 +1,327 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Contact Kerwin Speight</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"></head><body><header class="site-header"><div class="shell nav"><a class="brand" href="index.html"><span class="brand-mark">KS</span><span>KERWIN SPEIGHT</span></a><button class="menu-btn">☰</button><nav class="nav-links"><a href="about.html">About</a><a href="services.html">Services</a><a href="contact.html">Contact</a></nav><a class="nav-cta" href="contact.html">Let’s Connect</a></div></header><main><section class="page-hero"><div class="eyebrow">Let’s Connect</div><h1>Start the conversation.</h1><p>Tell Kerwin about your organization, leadership challenge, partnership, or speaking opportunity.</p></section><section class="section"><div class="shell contact-grid"><div class="contact-card glass"><h2>Contact</h2><p><a href="mailto:kerwinsp8@gmail.com">kerwinsp8@gmail.com</a></p><p class="note">Replace this email and add approved social links before launch.</p></div><form class="form-card glass" name="contact" method="POST" data-netlify="true"><input type="hidden" name="form-name" value="contact"><div class="form-grid"><label class="field"><span>Name</span><input name="name" required></label><label class="field"><span>Email</span><input type="email" name="email" required></label><label class="field full"><span>Message</span><textarea name="message" required></textarea></label><div class="field full"><button class="btn btn-gold" type="submit">Send Message →</button></div></div></form></div></section></main><footer><div class="shell footer-row"><div class="brand"><span class="brand-mark">KS</span><span>KERWIN SPEIGHT</span></div><div>© 2026 Kerwin Speight</div></div></footer><script src="script.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kerwin Speight | Leadership That Lasts</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+
+  <!-- Custom Configuration for Tailwind -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+          },
+          colors: {
+            theme: {
+              bg: '#F6F4F0',
+              text: '#2C2A28',
+              gold: '#B39371',
+              lightgold: '#D5C2A4',
+              gray: '#7A7571',
+              darkgray: '#4A4744',
+              brown: '#A69380',
+              border: '#E8E4DD'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom utility classes */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+    }
+  </style>
+</head>
+<body class="bg-theme-bg text-theme-text font-sans selection:bg-theme-lightgold selection:text-white pb-20 overflow-x-hidden">
+
+  <header id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-6">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 flex justify-between items-center">
+      
+      <!-- Logo -->
+      <div class="flex items-center gap-3 cursor-pointer">
+        <div class="text-xl font-serif text-theme-gold border border-theme-gold p-1 rounded">KS</div>
+        <span class="font-semibold tracking-[0.15em] text-sm text-theme-darkgray">KERWIN SPEIGHT</span>
+      </div>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-10 text-[11px] font-semibold tracking-[0.15em] text-theme-gray uppercase">
+        <a href="#about" class="hover:text-theme-gold transition-colors">About</a>
+        <a href="#services" class="hover:text-theme-gold transition-colors">Services</a>
+        <a href="#speaking" class="hover:text-theme-gold transition-colors">Speaking</a>
+        <a href="#resources" class="hover:text-theme-gold transition-colors">Resources</a>
+        <a href="#contact" class="hover:text-theme-gold transition-colors">Contact</a>
+      </nav>
+
+      <!-- CTA Desktop -->
+      <button class="hidden lg:block border border-theme-lightgold text-[#8C7A6B] hover:bg-theme-lightgold hover:text-white px-6 py-2.5 text-xs font-semibold tracking-widest uppercase transition-all duration-300 rounded-sm">
+        Let's Connect
+      </button>
+
+      <!-- Mobile Menu Toggle -->
+      <button id="mobile-menu-btn" class="lg:hidden text-theme-darkgray">
+        <i data-lucide="menu" id="menu-icon"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Nav Dropdown -->
+    <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-theme-bg border-t border-theme-border shadow-lg py-6 px-6 flex-col gap-6">
+      <a href="#about" class="mobile-link text-sm font-semibold tracking-widest text-theme-gray uppercase">About</a>
+      <a href="#services" class="mobile-link text-sm font-semibold tracking-widest text-theme-gray uppercase">Services</a>
+      <a href="#speaking" class="mobile-link text-sm font-semibold tracking-widest text-theme-gray uppercase">Speaking</a>
+      <a href="#resources" class="mobile-link text-sm font-semibold tracking-widest text-theme-gray uppercase">Resources</a>
+      <button class="border border-theme-lightgold text-[#8C7A6B] px-6 py-3 text-xs font-semibold tracking-widest uppercase rounded-sm w-full mt-4">
+        Let's Connect
+      </button>
+    </div>
+  </header>
+
+  <section class="relative pt-32 lg:pt-48 pb-20 lg:pb-32 px-6 lg:px-12 max-w-7xl mx-auto overflow-hidden">
+    <!-- Soft background glow circles to mimic the image's gradient background -->
+    <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-[#EBE4DA] rounded-full blur-[100px] opacity-60 -z-10 translate-x-1/3 -translate-y-1/4"></div>
+    
+    <div class="grid lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Hero Content -->
+      <div class="lg:col-span-6 relative z-10">
+        <div class="text-[10px] font-bold tracking-[0.25em] text-theme-brown uppercase mb-6 flex items-center gap-4">
+          Leader. Strategist. Change Catalyst.
+          <div class="h-px w-12 bg-theme-brown opacity-40"></div>
+        </div>
+        
+        <h1 class="text-5xl lg:text-7xl font-serif text-theme-text leading-[1.1] mb-6">
+          Leadership <br />
+          That <span class="italic text-theme-gold">Lasts.</span>
+        </h1>
+        
+        <p class="text-[#6B6661] text-lg lg:text-xl font-light leading-relaxed max-w-md mb-10">
+          I partner with organizations and leaders to drive clarity, build alignment, and create lasting impact—from the inside out.
+        </p>
+        
+        <button class="bg-gradient-to-r from-[#C2A384] to-theme-gold hover:from-theme-gold hover:to-[#A68360] text-white px-8 py-4 rounded-full text-sm font-semibold tracking-widest uppercase flex items-center gap-3 transition-all duration-300 shadow-[0_8px_20px_rgba(179,147,113,0.3)]">
+          Let's Work Together
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <!-- Hero Image -->
+      <div class="lg:col-span-6 relative z-0 flex justify-center lg:justify-end">
+        <div class="relative w-full max-w-[500px]">
+           <!-- Elegant Arch Frame -->
+           <div class="aspect-[4/5] w-full rounded-t-[200px] rounded-b-[20px] overflow-hidden shadow-2xl relative bg-[#EBE4DA]">
+              <img 
+                src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                alt="Kerwin Speight" 
+                class="w-full h-full object-cover object-top mix-blend-luminosity opacity-90"
+                style="filter: sepia(30%) hue-rotate(340deg) saturate(150%);"
+              />
+              <div class="absolute inset-0 bg-theme-lightgold/10 mix-blend-multiply"></div>
+           </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-16 lg:-mt-12 relative z-20">
+      <div class="glass-card shadow-[0_8px_32px_0_rgba(31,38,135,0.05)] rounded-2xl p-4 lg:p-8 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-12">
+        
+        <div class="flex flex-col items-center text-center px-4">
+          <div class="w-12 h-12 rounded-full flex items-center justify-center bg-theme-bg text-theme-gold mb-4 shadow-sm border border-white/50">
+            <i data-lucide="users" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-[11px] font-bold tracking-widest uppercase text-theme-darkgray mb-2">People First</h3>
+          <p class="text-sm text-theme-gray font-light leading-relaxed">Lead with empathy.<br/>Inspire with purpose.</p>
+        </div>
+
+        <div class="flex flex-col items-center text-center px-4 md:border-l md:border-theme-lightgold/30 relative">
+          <div class="w-12 h-12 rounded-full flex items-center justify-center bg-theme-bg text-theme-gold mb-4 shadow-sm border border-white/50">
+            <i data-lucide="target" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-[11px] font-bold tracking-widest uppercase text-theme-darkgray mb-2">Strategic Focus</h3>
+          <p class="text-sm text-theme-gray font-light leading-relaxed">Align vision with action.<br/>Drive measurable results.</p>
+        </div>
+
+        <div class="flex flex-col items-center text-center px-4 md:border-l md:border-theme-lightgold/30 relative">
+          <div class="w-12 h-12 rounded-full flex items-center justify-center bg-theme-bg text-theme-gold mb-4 shadow-sm border border-white/50">
+            <i data-lucide="leaf" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-[11px] font-bold tracking-widest uppercase text-theme-darkgray mb-2">Lasting Impact</h3>
+          <p class="text-sm text-theme-gray font-light leading-relaxed">Build cultures.<br/>Create legacies.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="py-24 px-6 lg:px-12 max-w-7xl mx-auto">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      
+      <!-- About Text -->
+      <div class="order-2 lg:order-1">
+        <h4 class="text-[10px] font-bold tracking-[0.25em] text-theme-brown uppercase mb-4">About Kerwin</h4>
+        <h2 class="text-4xl lg:text-5xl font-serif text-theme-text leading-tight mb-6">
+          Building Better Leaders and Stronger Organizations
+        </h2>
+        <p class="text-[#6B6661] text-base font-light leading-relaxed mb-8">
+          With over 15 years of experience in leadership development, culture transformation, and strategic planning, I help organizations unlock potential and navigate change with confidence and clarity.
+        </p>
+        <button class="flex items-center gap-3 text-theme-brown hover:text-theme-text text-xs font-bold tracking-widest uppercase transition-colors group border border-theme-border rounded-full px-6 py-3 bg-white/50">
+          Learn More About Kerwin
+          <div class="w-6 h-6 rounded-full border border-current flex items-center justify-center group-hover:bg-theme-text group-hover:text-white transition-all">
+            <i data-lucide="arrow-right" class="w-3 h-3"></i>
+          </div>
+        </button>
+      </div>
+
+      <!-- About Image with overlapping Quote -->
+      <div class="order-1 lg:order-2 relative">
+        <div class="aspect-[4/3] rounded-2xl overflow-hidden">
+          <img 
+            src="https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+            alt="Architecture inspiring leadership" 
+            class="w-full h-full object-cover"
+          />
+        </div>
+        
+        <!-- Quote Card -->
+        <div class="absolute -bottom-8 -left-4 lg:-bottom-12 lg:-left-12 glass-card p-8 rounded-2xl shadow-xl max-w-[280px]">
+          <div class="text-theme-gold mb-4 opacity-40">
+            <i data-lucide="quote" class="w-8 h-8"></i>
+          </div>
+          <p class="text-theme-text font-serif text-xl leading-snug mb-6">
+            Great leadership isn't about position. It's about purpose.
+          </p>
+          <div class="text-theme-gold font-serif text-xl italic">KS</div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <section id="services" class="py-24 px-6 lg:px-12 max-w-7xl mx-auto border-t border-theme-border">
+    <h4 class="text-[10px] font-bold tracking-[0.25em] text-theme-brown uppercase mb-4 text-center lg:text-left">Services</h4>
+    <div class="flex flex-col lg:flex-row justify-between items-end mb-16 gap-6">
+      <h2 class="text-4xl lg:text-5xl font-serif text-theme-text leading-tight text-center lg:text-left">
+        Solutions That Drive Impact
+      </h2>
+      <button class="hidden lg:flex items-center gap-2 text-theme-brown hover:text-theme-text text-xs font-bold tracking-widest uppercase transition-colors group">
+        View All Services
+        <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+      </button>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Service Card 1 -->
+      <div class="glass-card hover:bg-white/80 transition-all duration-300 rounded-2xl p-8 shadow-sm group">
+        <div class="w-14 h-14 rounded-full flex items-center justify-center bg-theme-bg text-theme-gold mb-6 shadow-inner group-hover:scale-110 transition-transform duration-500">
+           <i data-lucide="building-2" class="w-6 h-6"></i>
+        </div>
+        <h3 class="font-serif text-xl text-theme-text mb-3">Leadership Development</h3>
+        <p class="text-theme-gray font-light text-sm leading-relaxed mb-6">
+          Equip your leaders to inspire, empower, and execute with precision in complex environments.
+        </p>
+        <div class="w-8 h-px bg-theme-lightgold"></div>
+      </div>
+
+      <!-- Service Card 2 -->
+      <div class="glass-card hover:bg-white/80 transition-all duration-300 rounded-2xl p-8 shadow-sm group">
+        <div class="w-14 h-14 rounded-full flex items-center justify-center bg-theme-bg text-theme-gold mb-6 shadow-inner group-hover:scale-110 transition-transform duration-500">
+           <i data-lucide="compass" class="w-6 h-6"></i>
+        </div>
+        <h3 class="font-serif text-xl text-theme-text mb-3">Strategic Advisory</h3>
+        <p class="text-theme-gray font-light text-sm leading-relaxed mb-6">
+          Navigate complexity and turn strategy into momentum with actionable, clear roadmaps.
+        </p>
+        <div class="w-8 h-px bg-theme-lightgold"></div>
+      </div>
+
+      <!-- Service Card 3 -->
+      <div class="glass-card hover:bg-white/80 transition-all duration-300 rounded-2xl p-8 shadow-sm group">
+        <div class="w-14 h-14 rounded-full flex items-center justify-center bg-theme-bg text-theme-gold mb-6 shadow-inner group-hover:scale-110 transition-transform duration-500">
+           <i data-lucide="users" class="w-6 h-6"></i>
+        </div>
+        <h3 class="font-serif text-xl text-theme-text mb-3">Culture & Engagement</h3>
+        <p class="text-theme-gray font-light text-sm leading-relaxed mb-6">
+          Build connected, high-performing teams and thriving cultures that retain top talent.
+        </p>
+        <div class="w-8 h-px bg-theme-lightgold"></div>
+      </div>
+    </div>
+    
+    <div class="mt-8 flex justify-center lg:hidden">
+        <button class="flex items-center gap-2 text-theme-brown hover:text-theme-text text-xs font-bold tracking-widest uppercase transition-colors group border border-theme-lightgold rounded-full px-6 py-3">
+          View All Services
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </button>
+    </div>
+  </section>
+
+  <script>
+    // 1. Initialize Icons
+    lucide.createIcons();
+
+    // 2. Navbar Scroll Effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) {
+        navbar.classList.remove('bg-transparent', 'py-6');
+        navbar.classList.add('bg-[#F6F4F0]/90', 'backdrop-blur-md', 'shadow-sm', 'py-4');
+      } else {
+        navbar.classList.add('bg-transparent', 'py-6');
+        navbar.classList.remove('bg-[#F6F4F0]/90', 'backdrop-blur-md', 'shadow-sm', 'py-4');
+      }
+    });
+
+    // 3. Mobile Menu Toggle Logic
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    let isMenuOpen = false;
+
+    function toggleMenu() {
+      isMenuOpen = !isMenuOpen;
+      if (isMenuOpen) {
+        mobileMenu.classList.remove('hidden');
+        mobileMenu.classList.add('flex');
+        // Change icon to X using Lucide
+        mobileMenuBtn.innerHTML = '<i data-lucide="x"></i>';
+        lucide.createIcons();
+      } else {
+        mobileMenu.classList.add('hidden');
+        mobileMenu.classList.remove('flex');
+        // Change icon back to Menu
+        mobileMenuBtn.innerHTML = '<i data-lucide="menu"></i>';
+        lucide.createIcons();
+      }
+    }
+
+    mobileMenuBtn.addEventListener('click', toggleMenu);
+
+    // Close mobile menu when a link is clicked
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (isMenuOpen) toggleMenu();
+      });
+    });
+  </script>
+</body>
+</html>
